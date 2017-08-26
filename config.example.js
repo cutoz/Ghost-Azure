@@ -12,7 +12,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://my-ghost-blog.com',
-        mail: {},
+        mail:{
+            transport:"SMTP",
+            options:{
+                service:"Mailgun",
+                auth:{
+                    user:"postmaster@sandboxf59404ce3f474a759f4b30bd21579626.mailgun.org",
+                    pass:"7f678485aa67cfc4eddf7246666a1753"
+                }
+            },
+        },
         database: {
             client: 'sqlite3',
             connection: {
