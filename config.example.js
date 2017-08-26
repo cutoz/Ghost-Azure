@@ -11,7 +11,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://my-ghost-blog.com',
+        url: 'http://blog.microsoftcampusclub.com',
         mail:{
             transport:"SMTP",
             options:{
@@ -20,7 +20,7 @@ config = {
                     user:"postmaster@sandboxf59404ce3f474a759f4b30bd21579626.mailgun.org",
                     pass:"7f678485aa67cfc4eddf7246666a1753"
                 }
-            },
+            }
         },
         database: {
             client: 'sqlite3',
@@ -40,7 +40,16 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blog's published URL.
-        url: 'http://localhost:2368',
+        url: 'http://blog.microsoftcampusclub.com',
+        mail:{
+            transport:"SMTP",
+            options:{
+                service:"Mailgun",
+                auth:{
+                    user:"postmaster@sandboxf59404ce3f474a759f4b30bd21579626.mailgun.org",
+                    pass:"7f678485aa67cfc4eddf7246666a1753"
+                }
+            },
 
         // Example refferer policy
         // Visit https://www.w3.org/TR/referrer-policy/ for instructions
