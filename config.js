@@ -53,15 +53,15 @@ config = {
 
         // Visit http://support.ghost.org/mail for instructions
          mail: {
-             transport: 'SMTP',
+            transport: 'SMTP',
              options: {
-                 service: process.env.emailService,
+                 service: 'SENDGRID',
                  auth: {
-                     user: process.env.emailUsername, // mailgun username
-                     pass: process.env.emailPassword  // mailgun password
+                     user: 'apikey', // mailgun username
+                     pass: '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'  // mailgun password
                  }
              },
-             from: process.env.emailFromAddress // 'from' address when sending emails
+             from: "lokesh@microsftcampusclub.com" // 'from' address when sending emails
          },
 
         database: database ? database : {
@@ -92,16 +92,16 @@ config = {
 
         // Visit http://support.ghost.org/mail for instructions
         mail: {
-         transport: 'SMTP',
-         options: {
-             service: process.env.emailService,
-             auth: {
-                 user: process.env.emailUsername, // mailgun username
-                 pass: process.env.emailPassword  // mailgun password
-             }
+            transport: 'SMTP',
+             options: {
+                 service: 'SENDGRID',
+                 auth: {
+                     user: 'apikey', // mailgun username
+                     pass: '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'  // mailgun password
+                 }
+             },
+             from: "lokesh@microsftcampusclub.com" // 'from' address when sending emails
          },
-         from: process.env.emailFromAddress // 'from' address when sending emails
-        },
         database: database ? database : {
             client: 'sqlite3',
             connection: {

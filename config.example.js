@@ -12,7 +12,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://my-ghost-blog.com',
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+             options: {
+                 service: 'SENDGRID',
+                 auth: {
+                     user: 'apikey', // mailgun username
+                     pass: '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'  // mailgun password
+                 }
+             }
+        },
         database: {
             client: 'sqlite3',
             connection: {
@@ -41,17 +50,17 @@ config = {
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
         // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
+         mail: {
+             transport: 'SMTP',
+             options: {
+                 service: 'SENDGRID',
+                 auth: {
+                     user: 'apikey', // mailgun username
+                     pass: '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'  // mailgun password
+                 }
+             }
+         },
+        
 
         // #### Database
         // Ghost supports sqlite3 (default), MySQL & PostgreSQL
